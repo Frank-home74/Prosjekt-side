@@ -22,7 +22,12 @@ h1 {
 h2 {
   font-size: 46px;
   line-height: 54px;
-  color: #222;
+  color: #088178;
+}
+
+h3 {
+  color: #088178;
+  font-size: 24px; 
 }
 
 h4 {
@@ -56,15 +61,7 @@ span {
   height: auto;
 }
 
-/* header {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  position: sticky;
-  bottom: 0;
-  z-index: 999;
-} */
+
 
 .hero {
   text-align: center;
@@ -100,7 +97,7 @@ main.main-container {
 }
 
 .content {
-  height: 2000px; /* Ensure enough content to scroll */
+  /*height: 2000px; /* Ensure enough content to scroll */
   padding: 20px;
 }
 
@@ -114,8 +111,6 @@ main.main-container {
 .image-container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-
   flex-wrap: wrap; /* Tillater elementer å wrappe til neste linje */
   border-radius: 15px; /* Avrundede kanter */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Rame med skygge */
@@ -142,9 +137,7 @@ main.main-container {
   margin-bottom: 40px;
 }
 
-h1, h2 {
-  color: #333;
-}
+
 
 #header {
   display: flex;
@@ -204,6 +197,7 @@ h1, h2 {
 
 .flexbox {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
@@ -225,22 +219,25 @@ h1, h2 {
 }
 
 .item-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 1rem;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 10px; /* Space between items */
-    width: 100%; /* Ensure the container takes the full width of the parent */
+  margin-left: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tre kolonner som standard */
+  gap: 10px; /* Mellomrom mellom elementer */
+  width: 100%; /* Sikrer at containeren tar hele bredden til forelderen */
 }
 
-.item-container h2 {
+.header-h2 {
+  width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
+    margin-bottom: 10px;
+    
     color: #088178;
 }
+
+
+
+
 
 .flex-item {
   padding: 20px; /* Optional: for spacing */
@@ -316,7 +313,7 @@ button:hover {
 }
 
 #section1, #section2 {
-  height: 1000px; /* Ensure each section is tall enough */
+  /*height: 1000px; /* Ensure each section is tall enough */
   border: 1px solid #ccc;
   margin: 20px 0;
   padding: 20px;
@@ -328,15 +325,16 @@ button:hover {
 }
 
 .info h4, h5 {
-  background-color: #e3e6f3;
+  
   color: #088178;
   text-align: center;
-  padding: 20px 0 10px 0;
+  padding: 60px 0 0px 0;
 }
 
+
 #list {
+  display: flex;
   flex-wrap: wrap;
-  padding: 10px 20px 20px 80px;
   background-color: #e3e6f3;
   font-size: larger;
   color: #003a36;
@@ -352,9 +350,12 @@ ul {
 .om-oss {
     background-color: #e3e6f3;
     padding: 20px;
-    margin: 20px 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trasnit {
+  background-color: #e3e6f3;
 }
 .vindu {
   padding: 10px 20px 10px 40px;
@@ -368,7 +369,7 @@ ul {
 
 .vindu-img {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   padding: 20px 0px 10px 0px;
   gap: 80px; /* Adjust the value to increase or decrease the spacing */
@@ -402,7 +403,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px 80px 20px;
+  padding: 20px 60px 20px 60px;
 }
 
 footer .col {
@@ -413,7 +414,7 @@ footer .col {
 }
 
 footer.logo {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 footer h4 {
@@ -427,10 +428,14 @@ footer p {
 }
 
 footer a {
+ 
+
+
   font-size: 13px;
   text-decoration: none;
   color: #222;
   margin-bottom: 10px;
+  
 }
 
 footer .follow {
@@ -465,6 +470,19 @@ footer .copyright {
 /* Responsive Design */
 
 @media (max-width: 768px) {
+  .item-container {
+      grid-template-columns: repeat(2, 1fr); /* To kolonner på tablets */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .item-container {
+      grid-template-columns: 1fr; /* En kolonne på mobile enheter */
+  }
+}
+
+@media (max-width: 768px) {
     #header {
         flex-direction: column;
         align-items: center;
@@ -541,20 +559,26 @@ footer .copyright {
     footer {
         flex-direction: column;
         text-align: center;
+        
     }
 
     footer .col {
         margin-bottom: 20px;
+        
     }
 
     footer .follow {
-        margin-top: 10px;
+        margin-top: 0px; 
+    }
+
+    footer .follow h4 {
+      padding: 40px 0;
     }
 
     footer .install .row {
         flex-direction: column;
     }
-}
+
 
 
 
@@ -658,4 +682,22 @@ footer .copyright {
     footer .install .row {
         flex-direction: column;
     }
+}
+
+/* Media query for very small screens (e.g., iPhone SE) */
+@media (max-width: 414px) {
+  .item-container {
+      grid-template-columns: 1fr; /* En kolonne på svært små skjermer */
+      padding: 0.5rem; /* Mindre padding for å spare plass */
+      gap: 5px; /* Mindre gap for å spare plass */
+  }
+
+  .item-container img {
+      max-width: 100%; /* Sikrer at bilder ikke overskrider containerens bredde */
+      height: auto; /* Beholder bildets høydeforhold */
+  }
+
+  .item-container p {
+      font-size: 0.9rem; /* Mindre tekststørrelse for å spare plass */
+  }
 }

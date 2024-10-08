@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvalitetskontroll Plattform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, textarea {
+            margin-bottom: 10px;
+        }
+        button {
+            align-self: center;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kvalitetskontroll Plattform</h1>
+        <h2>Innlevering av Kvalitetskontrollrapporter</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="projectName">Prosjektnavn:</label>
+            <input type="text" id="projectName" name="projectName" required>
+
+            <label for="reportDate">Rapportdato:</label>
+            <input type="date" id="reportDate" name="reportDate" required>
+
+            <label for="inspector">Inspektør:</label>
+            <input type="text" id="inspector" name="inspector" required>
+
+            <label for="comments">Kommentarer:</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+
+            <label for="document">Last opp dokument:</label>
+            <input type="file" id="document" name="document" required>
+
+            <button type="submit">Send inn</button>
+        </form>
+    </div>
+</body>
+</html>

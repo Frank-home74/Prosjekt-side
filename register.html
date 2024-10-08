@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registrering</title>
+</head>
+<body>
+<header id="header">   
+    <a href="#"><img src="img/Logo-10.svg" alt="" class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Hjem</a></li>
+            <li><a href="prosjekter.html">Prosjekter</a></li>
+            <li><a href="tjenester.html">Tjenester</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="kontakt.html">Logg inn</a></li>  
+            </ul>
+    </div>
+    <div id="mobile">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="E-Mail"></i></a>
+    </div>
+</header>
+    <div class="container">
+        <h2>Kunde Registrering</h2>
+        <form id="customerRegisterForm">
+            <label for="customerUsername">Brukernavn:</label>
+            <input type="text" id="customerUsername" placeholder="Skriv inn brukernavn" name="username" required>
+            <label for="customerPassword">Passord:</label>
+            <input type="password" id="customerPassword" placeholder="Skriv inn passord" name="password" required>:
+            <label for="customerConfirmPassword">Bekreft Passord:</label>
+            <input type="password" id="customerConfirmPassword" placeholder="Bekreft passord" name="confirmPassword" required>
+            <button type="submit">Registrer</button>
+        </form>
+        <p>Allerede registrert? <a href="kontakt.html">Logg inn her</a></p>
+    </div>
+
+    <div class="container">
+        <h2>Ansatt Registrering</h2>
+        <form id="employeeRegisterForm">
+            <label for="employeeUsername">Brukernavn:</label>
+            <input type="text" id="employeeUsername" placeholder="Skriv inn brukernavn" required>
+            <label for="employeePassword">Passord:</label>
+            <input type="password" id="employeePassword" placeholder="Skriv inn passord" name="password" required>
+            <label for="employeeConfirmPassword">Bekreft Passord:</label>
+            <input type="password" id="employeeConfirmPassword" placeholder="Bekreft passord" name="confirmPassword" required>
+            <button type="submit">Registrer</button>
+        </form>
+        <p>Allerede registrert? <a href="kontakt.html">Logg inn her</a></p>
+    </div>
+</body>
+</html>

@@ -176,20 +176,24 @@ main.main-container {
 }
 
 #navbar li a:hover,
-#navbar li a.active {
+#navbar li a.active,
+#navbar li a.hover {
   color: #088178;
 }
 
 #navbar li a.active::after,
-#navbar li a:hover::after {
+#navbar li a:hover::after,
+#navbar li a.hover::after {
   content: "";
   width: 30%;
   height: 2px;
   background: #088178;
   position: absolute;
   bottom: -4px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 
 .flexbox {
   display: flex;

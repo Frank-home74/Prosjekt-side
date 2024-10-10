@@ -43,4 +43,31 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.toggle('active');
         });
     }
+
+    // Oppdater den aktive lenken i navigasjonsmenyen
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('#navbar li a');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // Legg til event listener for hover-effekten
+    navLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('active')) {
+                this.classList.add('hover');
+            }
+        });
+
+        link.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('active')) {
+                this.classList.remove('hover');
+            }
+        });
+    });
 });

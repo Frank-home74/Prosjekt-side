@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const customerRegisterForm = document.getElementById('customerRegisterForm');
     const employeeRegisterForm = document.getElementById('employeeRegisterForm');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navbar = document.getElementById('navbar');
 
     if (customerRegisterForm) {
         customerRegisterForm.addEventListener('submit', function(event) {
@@ -33,6 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Her kan du legge til logikk for å lagre ansatt brukerdata
             console.log('Ansatt Registrer:', { username, password });
+        });
+    }
+
+    if (hamburgerMenu && navbar) {
+        hamburgerMenu.addEventListener('click', function() {
+            navbar.classList.toggle('active');
         });
     }
 });
